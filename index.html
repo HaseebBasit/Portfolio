@@ -59,10 +59,11 @@
 					<li class="nav-item"><a class="nav-link" href="#section-services">Services</a></li>
 
 
-					<li class="nav-item">
-						<a class="nav-link" href="#section-contact">Contact</a>
-					</li>
-
+					<li>
+    <a href="#section-contact" data-nav-section="contact">
+        <span>Contact</span>
+    </a>
+</li>
 				</ul>
 
 			</div>
@@ -1252,221 +1253,288 @@
 
 	<!-- ================= END SERVICES SECTION ================= -->
 
-	<!-- ================= CONTACT FORM ================= -->
+	<!-- ================= CONTACT SECTION ================= -->
 
-<div class="col-md-7 mb-5 mb-md-0">
+<section class="site-section" id="section-contact" data-section="contact">
 
-    <div class="contact-form-box">
+    <div class="container">
 
-        <h3 class="mb-5">
-            Get In Touch
-        </h3>
+        <!-- SECTION HEADING -->
 
+        <div class="row">
 
-        <form
-            action="https://formsubmit.co/haseebbasit2707@gmail.com"
-            method="POST"
-            class="site-form"
-        >
+            <div class="section-heading text-center col-md-12">
 
-            <!-- CAPTCHA OFF -->
-            <input
-                type="hidden"
-                name="_captcha"
-                value="false"
-            >
+                <h2>
+                    Get <strong>In Touch</strong>
+                </h2>
 
-            <!-- EMAIL SUBJECT -->
-            <input
-                type="hidden"
-                name="_subject"
-                value="New Portfolio Contact Message"
-            >
+            </div>
 
-            <!-- EMAIL TEMPLATE -->
-            <input
-                type="hidden"
-                name="_template"
-                value="table"
-            >
-
-            <!-- REDIRECT AFTER SUCCESS -->
-            <input
-                type="hidden"
-                name="_next"
-                value="https://portfolio-kappa-five-2ko4n98s8r.vercel.app/thankyou.html"
-            >
+        </div>
 
 
-            <!-- ========================= -->
-            <!-- HONEYPOT ANTI-SPAM -->
-            <!-- Hidden from real users -->
-            <!-- ========================= -->
+        <div class="row">
 
-            <div
-                style="
-                    position:absolute;
-                    left:-9999px;
-                    width:1px;
-                    height:1px;
-                    overflow:hidden;
-                "
-                aria-hidden="true"
-            >
 
-                <label for="website">
-                    Website
-                </label>
+            <!-- ================= CONTACT FORM ================= -->
 
-                <input
-                    type="text"
-                    id="website"
-                    name="_honey"
-                    tabindex="-1"
-                    autocomplete="off"
-                >
+            <div class="col-md-7 mb-5 mb-md-0">
+
+                <div class="contact-form-box">
+
+                    <h3 class="mb-5">
+                        Get In Touch
+                    </h3>
+
+
+                    <form
+                        action="https://formsubmit.co/haseebbasit2707@gmail.com"
+                        method="POST"
+                        class="site-form"
+                    >
+
+                        <!-- CAPTCHA OFF -->
+                        <input
+                            type="hidden"
+                            name="_captcha"
+                            value="false"
+                        >
+
+
+                        <!-- EMAIL SUBJECT -->
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="New Portfolio Contact Message"
+                        >
+
+
+                        <!-- EMAIL TEMPLATE -->
+                        <input
+                            type="hidden"
+                            name="_template"
+                            value="table"
+                        >
+
+
+                        <!-- SUCCESS PAGE -->
+                        <input
+                            type="hidden"
+                            name="_next"
+                            value="https://portfolio-kappa-five-2ko4n98s8r.vercel.app/thankyou.html"
+                        >
+
+
+                        <!-- ========================= -->
+                        <!-- HONEYPOT ANTI-SPAM -->
+                        <!-- ========================= -->
+
+                        <div
+                            style="
+                                position:absolute;
+                                left:-9999px;
+                                width:1px;
+                                height:1px;
+                                overflow:hidden;
+                            "
+                            aria-hidden="true"
+                        >
+
+                            <label for="website">
+                                Website
+                            </label>
+
+                            <input
+                                type="text"
+                                id="website"
+                                name="_honey"
+                                tabindex="-1"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+
+                        <!-- ========================= -->
+                        <!-- NAME -->
+                        <!-- ========================= -->
+
+                        <div class="form-group">
+
+                            <input
+                                type="text"
+                                name="name"
+                                class="form-control px-3 py-4"
+                                placeholder="Your Name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ========================= -->
+                        <!-- EMAIL -->
+                        <!-- ========================= -->
+
+                        <div class="form-group">
+
+                            <input
+                                type="email"
+                                name="email"
+                                class="form-control px-3 py-4"
+                                placeholder="Your Email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ========================= -->
+                        <!-- MESSAGE -->
+                        <!-- ========================= -->
+
+                        <div class="form-group mb-5">
+
+                            <textarea
+                                name="message"
+                                class="form-control px-3 py-4"
+                                cols="30"
+                                rows="8"
+                                placeholder="Write a Message"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- ========================= -->
+                        <!-- SUBMIT -->
+                        <!-- ========================= -->
+
+                        <div class="form-group">
+
+                            <button
+                                type="submit"
+                                class="contact-submit-btn"
+                            >
+                                Send Message
+                                <span class="icon-paper-plane"></span>
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
 
             </div>
 
 
-            <!-- ========================= -->
-            <!-- NAME -->
-            <!-- ========================= -->
+            <!-- ================= CONTACT DETAILS ================= -->
 
-            <div class="form-group">
+            <div class="col-md-5 pl-md-5 contact-details-box">
 
-                <input
-                    type="text"
-                    name="name"
-                    class="form-control px-3 py-4"
-                    placeholder="Your Name"
-                    autocomplete="name"
-                    required
-                >
+                <h3 class="mb-5">
+                    My Contact Details
+                </h3>
+
+
+                <ul class="site-contact-details">
+
+
+                    <!-- EMAIL -->
+
+                    <li>
+
+                        <div class="contact-detail-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="text-uppercase">
+                                Email
+                            </span>
+
+                            <p>
+                                haseebbasit2707@gmail.com
+                            </p>
+
+                        </div>
+
+                    </li>
+
+
+                    <!-- PHONE -->
+
+                    <li>
+
+                        <div class="contact-detail-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="text-uppercase">
+                                Phone
+                            </span>
+
+                            <p>
+                                +92 305 5612235
+                            </p>
+
+                        </div>
+
+                    </li>
+
+
+                    <!-- ADDRESS -->
+
+                    <li>
+
+                        <div class="contact-detail-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="text-uppercase">
+                                Address
+                            </span>
+
+                            <p>
+                                Karachi, Pakistan<br>
+                                Hanif SRE<br>
+                                CPO 64/6
+                            </p>
+
+                        </div>
+
+                    </li>
+
+
+                </ul>
 
             </div>
 
 
-            <!-- ========================= -->
-            <!-- EMAIL -->
-            <!-- ========================= -->
-
-            <div class="form-group">
-
-                <input
-                    type="email"
-                    name="email"
-                    class="form-control px-3 py-4"
-                    placeholder="Your Email"
-                    autocomplete="email"
-                    required
-                >
-
-            </div>
-
-
-            <!-- ========================= -->
-            <!-- MESSAGE -->
-            <!-- ========================= -->
-
-            <div class="form-group mb-5">
-
-                <textarea
-                    name="message"
-                    class="form-control px-3 py-4"
-                    cols="30"
-                    rows="8"
-                    placeholder="Write a Message"
-                    required
-                ></textarea>
-
-            </div>
-
-
-            <!-- ========================= -->
-            <!-- SUBMIT BUTTON -->
-            <!-- ========================= -->
-
-            <div class="form-group">
-
-                <button
-                    type="submit"
-                    class="contact-submit-btn"
-                >
-                    Send Message
-                    <span class="icon-paper-plane"></span>
-                </button>
-
-            </div>
-
-
-        </form>
+        </div>
 
     </div>
 
-</div>
-
-				<!-- CONTACT DETAILS -->
-				<div class="col-md-5 pl-md-5 contact-details-box">
-
-					<h3 class="mb-5">
-						My Contact Details
-					</h3>
-
-					<ul class="site-contact-details">
-
-						<!-- EMAIL -->
-						<li>
-							<div class="contact-detail-icon">
-								<i class="fa-solid fa-envelope"></i>
-							</div>
-
-
-							<div>
-								<span class="text-uppercase">Email</span>
-								<p>haseebbasit2707@gmail.com</p>
-							</div>
-						</li>
-
-
-						<!-- PHONE -->
-						<li>
-							<div class="contact-detail-icon">
-								<i class="fa-solid fa-phone"></i>
-							</div>
-
-							<div>
-								<span class="text-uppercase">Phone</span>
-								<p>+92 305 5612235</p>
-							</div>
-						</li>
-
-
-						<!-- ADDRESS -->
-						<li>
-							<div class="contact-detail-icon">
-								<i class="fa-solid fa-location-dot"></i>
-							</div>
-
-							<div>
-								<span class="text-uppercase">Address</span>
-								<p>
-									Karachi, Pakistan<br>
-									Hanif SRE<br>
-									CPO 64/6
-								</p>
-							</div>
-						</li>
-
-					</ul>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</section>
+</section>
 
 	<!-- ================= END CONTACT SECTION ================= -->
 
