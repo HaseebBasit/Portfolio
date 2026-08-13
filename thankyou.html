@@ -1,14 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Thank You</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thank You | Haseeb Basit</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Background decoration */
+
+        body::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: rgba(0, 123, 255, 0.08);
+            border-radius: 50%;
+            top: -120px;
+            left: -100px;
+        }
+
+        body::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(0, 123, 255, 0.07);
+            border-radius: 50%;
+            bottom: -120px;
+            right: -80px;
+        }
+
+        .thank-you-container {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            max-width: 650px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 55px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        /* Check icon */
+
+        .success-icon {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            background: #007bff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+            animation: pop 0.7s ease 0.3s both;
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #222;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h1 span {
+            color: #007bff;
+        }
+
+        .message {
+            font-size: 17px;
+            color: #666;
+            line-height: 1.8;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+
+        .small-message {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        /* Button */
+
+        .home-btn {
+            display: inline-block;
+            padding: 13px 30px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.25);
+        }
+
+        .home-btn:hover {
+            background: #0056b3;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 123, 255, 0.35);
+        }
+
+        /* Social / footer */
+
+        .footer-text {
+            margin-top: 35px;
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        .footer-text strong {
+            color: #777;
+        }
+
+        /* Animations */
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes pop {
+
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            70% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .thank-you-container {
+                padding: 45px 25px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .message {
+                font-size: 15px;
+            }
+
+            .success-icon {
+                width: 75px;
+                height: 75px;
+                font-size: 36px;
+            }
+
+        }
+    </style>
+
 </head>
+
+
 <body>
 
-    <h1>Thank You!</h1>
-    <p>Your message has been sent successfully.</p>
+    <div class="thank-you-container">
 
-    <a href="index.html">Go Back to Portfolio</a>
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h1>
+            Thank <span>You!</span>
+        </h1>
+
+        <p class="message">
+            Your message has been successfully sent.
+            Thank you for reaching out. I really appreciate
+            your time and interest.
+        </p>
+
+        <p class="small-message">
+            I'll get back to you as soon as possible.
+        </p>
+
+        <a href="index.html" class="home-btn">
+            ← Back to Portfolio
+        </a>
+
+        <div class="footer-text">
+            Designed & Developed by <strong>Haseeb Basit</strong>
+        </div>
+
+    </div>
 
 </body>
+
 </html>
