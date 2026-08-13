@@ -1252,113 +1252,159 @@
 
 	<!-- ================= END SERVICES SECTION ================= -->
 
-	<!-- ================= CONTACT SECTION ================= -->
+	<!-- ================= CONTACT FORM ================= -->
 
-	<section class="site-section contact-section" id="section-contact">
+<div class="col-md-7 mb-5 mb-md-0">
 
-		<div class="container">
+    <div class="contact-form-box">
 
-			<!-- Heading -->
-			<div class="row">
-
-				<div class="col-md-12 mb-5">
-
-					<div class="section-heading text-center">
-
-						<h2>
-							Get <strong>In Touch</strong>
-						</h2>
-
-					</div>
-
-				</div>
-
-			</div>
+        <h3 class="mb-5">
+            Get In Touch
+        </h3>
 
 
-			<div class="row contact-row">
+        <form
+            action="https://formsubmit.co/haseebbasit2707@gmail.com"
+            method="POST"
+            class="site-form"
+        >
+
+            <!-- CAPTCHA OFF -->
+            <input
+                type="hidden"
+                name="_captcha"
+                value="false"
+            >
+
+            <!-- EMAIL SUBJECT -->
+            <input
+                type="hidden"
+                name="_subject"
+                value="New Portfolio Contact Message"
+            >
+
+            <!-- EMAIL TEMPLATE -->
+            <input
+                type="hidden"
+                name="_template"
+                value="table"
+            >
+
+            <!-- REDIRECT AFTER SUCCESS -->
+            <input
+                type="hidden"
+                name="_next"
+                value="https://portfolio-kappa-five-2ko4n98s8r.vercel.app/thankyou.html"
+            >
 
 
-				<!-- ================= CONTACT FORM ================= -->
+            <!-- ========================= -->
+            <!-- HONEYPOT ANTI-SPAM -->
+            <!-- Hidden from real users -->
+            <!-- ========================= -->
 
-				<div class="col-md-7 mb-5 mb-md-0">
+            <div
+                style="
+                    position:absolute;
+                    left:-9999px;
+                    width:1px;
+                    height:1px;
+                    overflow:hidden;
+                "
+                aria-hidden="true"
+            >
 
-					<div class="contact-form-box">
+                <label for="website">
+                    Website
+                </label>
 
-						<h3 class="mb-5">
-							Get In Touch
-						</h3>
+                <input
+                    type="text"
+                    id="website"
+                    name="_honey"
+                    tabindex="-1"
+                    autocomplete="off"
+                >
 
-
-						<form action="https://formsubmit.co/haseebbasit2707@gmail.com" method="POST" class="site-form">
-
-							<!-- Disable reCAPTCHA -->
-							<input type="hidden" name="_captcha" value="false">
-
-							<!-- Email subject -->
-							<input type="hidden" name="_subject" value="New Portfolio Contact Message">
-
-							<!-- Better email layout -->
-							<input type="hidden" name="_template" value="table">
-
-							<!-- Reply directly to visitor -->
-							<input type="hidden" name="_replyto" value="">
-
-							<!-- IMPORTANT:
-                             Replace YOUR-LIVE-DOMAIN with your actual website URL
-                             Example:
-                             https://haseebbasit.github.io/Portfolio/thankyou.html
-                        -->
-							<input type="hidden" name="_next" value="https://portfolio-kappa-five-2ko4n98s8r.vercel.app//thankyou.html">
+            </div>
 
 
-							<!-- Name -->
+            <!-- ========================= -->
+            <!-- NAME -->
+            <!-- ========================= -->
 
-							<div class="form-group">
+            <div class="form-group">
 
-								<input type="text" name="name" class="form-control px-3 py-4" placeholder="Your Name"
-									required>
+                <input
+                    type="text"
+                    name="name"
+                    class="form-control px-3 py-4"
+                    placeholder="Your Name"
+                    autocomplete="name"
+                    required
+                >
 
-							</div>
-
-
-							<!-- Email -->
-
-							<div class="form-group">
-
-								<input type="email" name="email" class="form-control px-3 py-4" placeholder="Your Email"
-									required>
-
-							</div>
+            </div>
 
 
-							<!-- Message -->
+            <!-- ========================= -->
+            <!-- EMAIL -->
+            <!-- ========================= -->
 
-							<div class="form-group mb-5">
+            <div class="form-group">
 
-								<textarea name="message" class="form-control px-3 py-4" cols="30" rows="8"
-									placeholder="Write a Message" required></textarea>
+                <input
+                    type="email"
+                    name="email"
+                    class="form-control px-3 py-4"
+                    placeholder="Your Email"
+                    autocomplete="email"
+                    required
+                >
 
-							</div>
+            </div>
 
 
-							<!-- Submit -->
+            <!-- ========================= -->
+            <!-- MESSAGE -->
+            <!-- ========================= -->
 
-							<div class="form-group">
+            <div class="form-group mb-5">
 
-								<button type="submit" class="contact-submit-btn">
-									Send Message
-									<span class="icon-paper-plane"></span>
-								</button>
+                <textarea
+                    name="message"
+                    class="form-control px-3 py-4"
+                    cols="30"
+                    rows="8"
+                    placeholder="Write a Message"
+                    required
+                ></textarea>
 
-							</div>
+            </div>
 
-						</form>
 
-					</div>
+            <!-- ========================= -->
+            <!-- SUBMIT BUTTON -->
+            <!-- ========================= -->
 
-				</div>
+            <div class="form-group">
 
+                <button
+                    type="submit"
+                    class="contact-submit-btn"
+                >
+                    Send Message
+                    <span class="icon-paper-plane"></span>
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
 
 				<!-- CONTACT DETAILS -->
 				<div class="col-md-5 pl-md-5 contact-details-box">
