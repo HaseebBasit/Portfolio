@@ -2314,3 +2314,116 @@ a:active {
     transition: none !important;
   }
 }
+
+/* =========================================================
+   MOBILE PORTFOLIO — TAP TO SHOW "VIEW PROJECT"
+========================================================= */
+
+@media (max-width: 767px) {
+
+  /*
+     Mobile par project image/link direct click ko
+     temporarily block karne ke liye.
+  */
+
+  .single-portfolio .thumb {
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* Overlay normally hidden */
+  .single-portfolio .thumb .overlay-bg {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .35s ease;
+  }
+
+  /* View Project button hidden */
+  .single-portfolio .middle {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translate(-50%, -40%) scale(.9);
+
+    transition:
+      opacity .35s ease,
+      visibility .35s ease,
+      transform .35s ease;
+
+    z-index: 30;
+  }
+
+
+  /* =========================================
+     WHEN MOBILE CARD IS ACTIVE
+  ========================================= */
+
+  .single-portfolio.mobile-active .thumb .overlay-bg {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .single-portfolio.mobile-active .middle {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+
+  /* Image slight zoom when active */
+  .single-portfolio.mobile-active .thumb .image {
+    transform: scale(1.08);
+  }
+
+
+  /* View Project button */
+  .single-portfolio .middle .text {
+    padding: 11px 22px;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+
+    border-radius: 30px;
+
+    box-shadow:
+      0 8px 25px rgba(0, 0, 0, .35);
+  }
+
+
+  /* =========================================
+     IMPORTANT
+     Full image link should NOT sit above
+     the View Project button on mobile.
+  ========================================= */
+
+  .single-portfolio > .relative > .img-pop-up {
+    z-index: 5;
+  }
+
+  .single-portfolio .middle {
+    z-index: 50;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .single-portfolio .thumb {
+    height: 210px;
+  }
+
+  .single-portfolio .middle .text {
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+
+}
