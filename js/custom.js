@@ -1371,3 +1371,159 @@
 
 
 })();
+
+/* =========================================================
+   MOBILE PORTFOLIO TAP BEHAVIOR
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /*
+       Only run this behavior on mobile/tablet.
+    */
+    if (window.innerWidth > 767) {
+        return;
+    }
+
+
+    const portfolioItems =
+        document.querySelectorAll(".single-portfolio");
+
+
+    portfolioItems.forEach(function (item) {
+
+        const imageLink =
+            item.querySelector(".img-pop-up");
+
+        const viewButton =
+            item.querySelector(".middle .text");
+
+
+        if (!imageLink) return;
+
+
+        /* =========================================
+           FIRST TAP
+           Show View Project
+        ========================================= */
+
+        imageLink.addEventListener("click", function (e) {
+
+            /*
+               If card is NOT active:
+               don't open project.
+            */
+
+            if (!item.classList.contains("mobile-active")) {
+
+                e.preventDefault();
+                e.stopPropagation();
+
+                /*
+                   Remove active state from
+                   other projects.
+                */
+
+                portfolioItems.forEach(function (otherItem) {
+
+                    if (otherItem !== item) {
+                        otherItem.classList.remove(
+                            "mobile-active"
+                        );
+                    }
+
+                });
+
+
+                /*
+                   Show View Project
+                */
+
+                item.classList.add(
+                    "mobile-active"
+                );
+
+                return;
+            }
+
+
+            /*
+               Second tap on image:
+               do nothing / keep View Project visible.
+            */
+
+            e.preventDefault();
+        });
+
+
+        /* =========================================
+           VIEW PROJECT BUTTON
+           SECOND TAP → OPEN PROJECT
+        ========================================= */
+
+        if (viewButton) {
+
+            viewButton.addEventListener(
+                "click",
+                function (e) {
+
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    /*
+                       Find the actual project link.
+                    */
+
+                    const projectLink =
+                        item.querySelector(
+                            ".p-inner a"
+                        );
+
+
+                    if (
+                        projectLink &&
+                        projectLink.href
+                    ) {
+
+                        window.open(
+                            projectLink.href,
+                            "_blank"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+    });
+
+
+    /* =========================================
+       TAP OUTSIDE
+       CLOSE ACTIVE PROJECT
+    ========================================= */
+
+    document.addEventListener(
+        "click",
+        function (e) {
+
+            portfolioItems.forEach(function (item) {
+
+                if (
+                    !item.contains(e.target)
+                ) {
+
+                    item.classList.remove(
+                        "mobile-active"
+                    );
+
+                }
+
+            });
+
+        }
+    );
+
+});
