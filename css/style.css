@@ -2427,3 +2427,17 @@ a:active {
   }
 
 }
+
+/* =========================================================
+   MOBILE HERO IMAGE FIX
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .site-hero {
+        background-size: 100% 100% !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+}
